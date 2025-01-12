@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+  <script>
+    // The bug is in the following line:
+    document.getElementById("myDiv").style.display = "none"; 
+    //The display property is set to "none" before the script executes. 
+    //To fix, move the script tag after the div, or add setTimeout to let the DOM load.
+  </script>
+</body>
+</html>
